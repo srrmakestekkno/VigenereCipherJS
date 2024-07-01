@@ -1,17 +1,12 @@
-
 import { useState, useEffect } from 'react';
+import "./App.css";
 
 const Header = () => {
-  const style = {
-    textAlign: "center",
-    margin: 0,
-    paddingTop: "6px",
-    backgroundColor: "#111111",
-    color: "white",
-    height: "50px",
-  };
-  
-  return <h1 style={style}>Vignere Cipher</h1>;
+  return (
+    <header className='header'>
+      <h1 style={style}>Vignere Cipher</h1>
+    </header>
+  );  
 }
 
 const createTabulaRecta = () => {
@@ -39,7 +34,7 @@ const App = () => {
   return (
     <>
     <Header />
-    <table style={{margin: "0 auto 0 auto"}}>
+    <table className='tabulaRecta'>
       <tbody>
         {table.map((row, i) => {
            return <tr key={i}>
